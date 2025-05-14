@@ -1,7 +1,8 @@
 # 🧠 Brain Tumor Detection and Classification using Deep Learning
 
 [![Project Banner](docs/css/segmentation/images/faq.gif)](https://mohd-aflah.github.io/Brain-tumor/)
-*A deep learning-powered system for accurate brain tumor detection and classification using CNN models.*
+
+## *A deep learning-powered system for accurate brain tumor detection and classification using CNN models.*
 
 ---
 
@@ -82,7 +83,7 @@ Brain tumor detection and classification is a critical task in medical imaging. 
 ### Lead Developer
 - **Mohammed Aflah**  
   Junior Product & Project Coordinator | CSE Graduate  
-  ["docs/css/Contact us/Aflah.jpg"](https://www.linkedin.com/in/mohammed-aflah)
+  [(docs/css/Contact us/Aflah.jpg)](https://www.linkedin.com/in/mohammed-aflah)
 
 ### Team Members
 - **John Alex** – Data Preprocessing & UI  
