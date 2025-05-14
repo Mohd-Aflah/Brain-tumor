@@ -1,6 +1,6 @@
 # 🧠 Brain Tumor Detection and Classification using Deep Learning
 
-![Project Banner](flask_app/static/screenshots/banner.png)  
+![Project Banner](docs/css/segmentation/images/faq.gif)  
 *A deep learning-powered system for accurate brain tumor detection and classification using CNN models.*
 
 ---
@@ -66,13 +66,13 @@ Brain tumor detection and classification is a critical task in medical imaging. 
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="flask_app/static/screenshots/home_ui.png" width="45%">
-  <img src="flask_app/static/screenshots/prediction_result.png" width="45%">
+  <img src="Documents/Images/Segment.png" width="45%">
+  <img src="Documents/Images/yolo.png" width="45%">
 </p>
 
 <p align="center">
-  <img src="flask_app/static/screenshots/accuracy_graph.png" width="45%">
-  <img src="flask_app/static/screenshots/loss_graph.png" width="45%">
+  <img src="Documents/Images/Web1.png" width="45%">
+  <img src="Documents/Images/Web2.png" width="45%">
 </p>
 
 ---
@@ -82,7 +82,7 @@ Brain tumor detection and classification is a critical task in medical imaging. 
 ### Lead Developer
 - **Mohammed Aflah**  
   Junior Product & Project Coordinator | CSE Graduate  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-mohammed-aflah-blue?logo=linkedin)](https://www.linkedin.com/in/mohammed-aflah)
+  [![LinkedIn]("docs/css/Contact us/Aflah.jpg")](https://www.linkedin.com/in/mohammed-aflah)
 
 ### Team Members
 - **John Alex** – Data Preprocessing & UI  
