@@ -1,16 +1,16 @@
 # 🧠 Brain Tumor Detection and Classification using Deep Learning
 
-![Project Banner](https://via.placeholder.com/1200x400.png?text=Brain+Tumor+Detection+Project)  
+![Project Banner](flask_app/static/screenshots/banner.png)  
 *A deep learning-powered system for accurate brain tumor detection and classification using CNN models.*
 
 ---
 
 ## 🔗 Project Links
 
-- 🌐 **Website Preview:** [View Live Flask App](https://your-deployed-app-link.com)
-- 📂 **Full Project Files (Drive):** [Download from Google Drive](https://drive.google.com/your-full-project-link)
-- 🧠 **Trained Models (Drive):** [Access Model Files](https://drive.google.com/your-models-link)
-- 📄 **Published Research Paper:** [Springer Link](https://link.springer.com/your-paper-link)
+- 🌐 **Website Preview:** [View Live Flask App](https://mohd-aflah.github.io/Brain-tumor/)
+- 📂 **Full Project Files (Drive):** [Download from Google Drive](https://drive.google.com/drive/folders/1GftzDHprQybcxWCjjNBCZLGDUQwBGNpv)
+- 🧠 **Trained Models (Drive):** [Access Model Files](https://drive.google.com/drive/folders/18HyxbrvuutqVQmk8V8ni9crAtzGx9Eds)
+- 📄 **Published Research Paper:** [Springer Link](https://link.springer.com/)
 
 ---
 
@@ -19,35 +19,34 @@
 This repository consists of the following three main folders:
 
 ### 1. `documents/`
-This folder contains all the documentation related to the project including:
+Contains all the documentation related to the project:
 - Abstract
-- Project Report
+- Final Report
 - PPT Presentations
 - Research Paper
 
 ### 2. `flask_app/`
-This is the core Flask application folder that includes:
-- `app.py`: Main Python file to run the Flask server
-- `templates/`: HTML files for UI
-- `static/`: CSS, JS, images, etc.
-- `model/`: Training code and model files
-- `requirements.txt`: Required libraries and dependencies
+The core Flask application:
+- `app.py`: Flask server
+- `templates/`: HTML templates
+- `static/`: CSS, JS, and images
+- `model/`: Training scripts and saved models
+- `requirements.txt`: Python dependencies
 
 ### 3. `docs/`
-This folder contains a static version of the Flask app suitable for deployment on GitHub Pages.
+Static version of the app, suitable for GitHub Pages deployment.
 
 ---
 
 ## 🧠 Project Overview
 
-Brain tumor detection and classification is a critical task in medical imaging. This project presents a web-based intelligent system powered by deep learning to assist radiologists and doctors in diagnosing brain tumors from MRI images. Our model was trained using state-of-the-art CNN architectures including **VGG16**, **EfficientNetB0**, and **ResNet50**, achieving high accuracy in both detection and multi-class classification.
+Brain tumor detection and classification is a critical task in medical imaging. This project presents a web-based intelligent system powered by deep learning to assist radiologists and doctors in diagnosing brain tumors from MRI images. Models such as **VGG16**, **EfficientNetB0**, and **ResNet50** were used to classify different types of tumors with high accuracy.
 
 ### 🔬 Key Features:
-- Preprocessed MRI datasets (glioma, meningioma, pituitary tumors)
-- CNN-based model training and evaluation
-- Flask-based web interface for real-time prediction
-- Research paper published in **Springer**
-- Achieved **96%+** accuracy in classification tasks
+- CNN-based detection of glioma, meningioma, and pituitary tumors
+- Real-time prediction via Flask web app
+- Visualization of results, accuracy graphs, and predictions
+- Research published in **Springer**
 
 ---
 
@@ -56,25 +55,24 @@ Brain tumor detection and classification is a critical task in medical imaging. 
 | Component       | Specification                              |
 |----------------|----------------------------------------------|
 | OS             | Windows 11 / Ubuntu 22.04                    |
-| Processor      | Intel Core i7 / AMD Ryzen 7                  |
-| RAM            | 16 GB DDR4                                   |
-| GPU            | NVIDIA RTX 3060 / Google Colab TPU support   |
-| IDE            | VS Code / Jupyter Notebook                   |
+| Processor      | Intel Core i5                                |
+| RAM            | 8 GB DDR4                                    |
+| GPU            | Google Colab / CUDA-compatible GPU (optional)|
 | Libraries      | TensorFlow, Keras, Flask, OpenCV, NumPy      |
-| Dataset        | Publicly available MRI Brain Tumor datasets  |
+| IDE            | VS Code / Jupyter Notebook                   |
 
 ---
 
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="https://via.placeholder.com/600x350.png?text=Model+Prediction+UI" width="45%">
-  <img src="https://via.placeholder.com/600x350.png?text=Accuracy+Graph" width="45%">
+  <img src="flask_app/static/screenshots/home_ui.png" width="45%">
+  <img src="flask_app/static/screenshots/prediction_result.png" width="45%">
 </p>
 
 <p align="center">
-  <img src="https://via.placeholder.com/600x350.png?text=Loss+Graph" width="45%">
-  <img src="https://via.placeholder.com/600x350.png?text=Classification+Result" width="45%">
+  <img src="flask_app/static/screenshots/accuracy_graph.png" width="45%">
+  <img src="flask_app/static/screenshots/loss_graph.png" width="45%">
 </p>
 
 ---
@@ -84,15 +82,15 @@ Brain tumor detection and classification is a critical task in medical imaging. 
 ### Lead Developer
 - **Mohammed Aflah**  
   Junior Product & Project Coordinator | CSE Graduate  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-MohammedAflah-blue?logo=linkedin)](https://www.linkedin.com/in/aflah-mohammed)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-mohammed-aflah-blue?logo=linkedin)](https://www.linkedin.com/in/mohammed-aflah)
 
 ### Team Members
 - **John Alex** – Data Preprocessing & UI  
   [LinkedIn](https://www.linkedin.com/in/johnalex)
-  
+
 - **Sara Philip** – Model Training and Research  
   [LinkedIn](https://www.linkedin.com/in/saraphilip)
-  
+
 - **Nihal Raj** – Backend & Deployment  
   [LinkedIn](https://www.linkedin.com/in/nihalraj)
 
@@ -116,7 +114,7 @@ Brain tumor detection and classification is a critical task in medical imaging. 
 > **Title:** *A Deep Learning-Based Web Application for Brain Tumor Detection and Classification*  
 > **Published in:** Springer – Lecture Notes in Networks and Systems, 2025  
 > **Authors:** Mohammed Aflah, Sara Philip, John Alex, Nihal Raj  
-> 📄 **DOI & Link:** [Springer Link](https://link.springer.com/your-paper-link)  
+> 📄 **DOI & Link:** [Springer Link](https://link.springer.com/)  
 > 🏫 **Affiliation:** Department of Computer Science & Engineering, MEA Engineering College
 
 ---
@@ -124,16 +122,16 @@ Brain tumor detection and classification is a critical task in medical imaging. 
 ## ⚖️ License & Acknowledgement
 
 © 2025 Department of Computer Science & Engineering, **MEA Engineering College, Perinthalmanna**  
-All rights reserved. This project is submitted as part of the final academic capstone and is protected under academic and institutional copyright.
+All rights reserved. This project is submitted as part of the final academic capstone and is protected under institutional copyright.
 
-> Special thanks to **IEEE MEA SB** and all faculty members for their continued support and guidance.
+> Special thanks to Students and all faculty members for their continued support and mentorship.
 
 ---
 
 ## 📫 Contact
 
 For queries or collaboration, contact:  
-📧 mohammed.aflah.cse@gmail.com  
-🌐 [LinkedIn – Mohammed Aflah](https://www.linkedin.com/in/aflah-mohammed)
+📧 mohdaflah77@gmail.com  
+🌐 [LinkedIn – Mohammed Aflah](https://www.linkedin.com/in/mohammed-aflah)
 
 ---
