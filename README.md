@@ -89,10 +89,12 @@ Brain tumor detection and classification is a critical task in medical imaging. 
 <a href="https://www.linkedin.com/in/minhaj-akavalappil">
   <img src="docs/css/Contact%20us/Minhaj.jpg" alt="Linkedin" width="120" />
 </a>
+
 - **Mohammed Aseel**
 <a href="https://www.linkedin.com/in/mohdaseel">
   <img src="docs/css/Contact%20us/Aseel.jpg" alt="Linkedin" width="120" />
 </a>
+
 - **Mohammed Jasim A.** 
 <a href="https://www.linkedin.com/in/mohd-jasim">
   <img src="docs/css/Contact%20us/Jasim.jpg" alt="Linkedin" width="120" />
