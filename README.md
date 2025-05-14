@@ -8,7 +8,7 @@
 
 ## 🔗 Project Links
 
-- 🌐 **Website Preview:** [View Live Flask App](https://mohd-aflah.github.io/Brain-tumor/)
+- 🌐 **Website Preview:** [View Live](https://mohd-aflah.github.io/Brain-tumor/)
 - 📂 **Full Project Files (Drive):** [Download from Google Drive](https://drive.google.com/drive/folders/1GftzDHprQybcxWCjjNBCZLGDUQwBGNpv)
 - 🧠 **Trained Models (Drive):** [Access Model Files](https://drive.google.com/drive/folders/18HyxbrvuutqVQmk8V8ni9crAtzGx9Eds)
 - 📄 **Published Research Paper:** [Springer Link](https://link.springer.com/)
@@ -80,42 +80,40 @@ Brain tumor detection and classification is a critical task in medical imaging. 
 
 ## 👨‍💻 Developers & Contributors
 
-### Lead Developer
 - **Mohammed Aflah**  
-  Junior Product & Project Coordinator | CSE Graduate  
 <a href="https://www.linkedin.com/in/mohammed-aflah">
   <img src="docs/css/Contact%20us/Aflah.jpg" alt="Linkedin" width="120" />
 </a>
-### Team Members
-- **John Alex** – Data Preprocessing & UI  
-  [LinkedIn](https://www.linkedin.com/in/johnalex)
 
-- **Sara Philip** – Model Training and Research  
-  [LinkedIn](https://www.linkedin.com/in/saraphilip)
-
-- **Nihal Raj** – Backend & Deployment  
-  [LinkedIn](https://www.linkedin.com/in/nihalraj)
-
+- **Minhaj Akavalapil** 
+<a href="https://www.linkedin.com/in/minhaj-akavalappil">
+  <img src="docs/css/Contact%20us/Minhaj.jpg" alt="Linkedin" width="120" />
+</a>
+- **Mohammed Aseel**
+<a href="https://www.linkedin.com/in/mohdaseel">
+  <img src="docs/css/Contact%20us/Aseel.jpg" alt="Linkedin" width="120" />
+</a>
+- **Mohammed Jasim A.** 
+<a href="https://www.linkedin.com/in/mohd-jasim">
+  <img src="docs/css/Contact%20us/Jasim.jpg" alt="Linkedin" width="120" />
+</a>
 ---
 
 ## 🎓 Faculty Coordinators
 
-- **Dr. Fathima Nazeema** – Head of Department, CSE  
-  [LinkedIn](https://www.linkedin.com/in/fathima-nazeema)
+- **Najla Musthafa** – Assistant proffessor, MEAEC 
 
-- **Prof. Ameen Shahul** – IEEE Branch Counselor  
-  [LinkedIn](https://www.linkedin.com/in/ameen-shahul)
+- **Dr. Shanid Malayil** – Associate proffessor, MEAEC   
 
-- **Prof. Anwar Sadath** – Research and Innovation Lead  
-  [LinkedIn](https://www.linkedin.com/in/anwar-sadath)
+- **Mubeena A K** – Assistant proffessor, MEAEC 
 
 ---
 
 ## 📚 Research Publication
 
-> **Title:** *A Deep Learning-Based Web Application for Brain Tumor Detection and Classification*  
-> **Published in:** Springer – Lecture Notes in Networks and Systems, 2025  
-> **Authors:** Mohammed Aflah, Sara Philip, John Alex, Nihal Raj  
+> **Title:** *EfficientNet-Based and YOLO-Driven Brain Tumor Detection and Segmentation.*  
+> **Published in:** Springer  
+> **Authors:** Mohammed Aflah, Minhaj Akavalappil, Mohammed Aseel, Mohammed Jasim A., Najla Musthafa, Dr. Shanid Malayil, Mubeena AK  
 > 📄 **DOI & Link:** [Springer Link](https://link.springer.com/)  
 > 🏫 **Affiliation:** Department of Computer Science & Engineering, MEA Engineering College
 
