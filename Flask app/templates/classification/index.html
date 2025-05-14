@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Tumor Classification Model</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='classification/assets/css/main.css') }}" />
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='classification/header_resn.css') }}">
+		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='classification/assets/css/noscript.css') }}" /></noscript>
+	</head>
+	<body class="is-preload">
+		<header id="header">
+			<div class="content">
+				<h1><a href="#">Tumor Classification Model</a></h1>
+				<ul class="actions">
+					<div class="upload-section">
+						<!-- Image upload section -->
+						<input type="file" id="fileInput" accept="image/*" onchange="previewImage()">
+						<!-- Prediction Button -->
+						<li><a href="#one" class="button icon solid fa-chevron-down scrolly" onclick="uploadImage()">Classify</a></li>
+						<li><a href="/" class="button icon solid fa-chevron-home">Home</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="image phone"><div class="inner"><img src="{{ url_for('static', filename='classification/images/faq.gif') }}" alt="" /></div></div>
+		</header>
+
+		<!-- Instructions Section -->
+		<section id="instructions">
+			<h3>Steps to Get Prediction:</h3>
+			<ol>
+				<li>Click on the "Choose File" button to select an MRI image.</li>
+				<li>Click the "Classify" button to predict the type of tumor.</li>
+				<li>The result will appear below after processing.</li>
+			</ol>
+		</section>
+
+		<!-- Display the uploaded image -->
+		<div id="imagePreviewSection" style="display:none;">
+			<h3>Uploaded Image:</h3>
+			<img id="imagePreview" src="" alt="Uploaded Image" style="max-width: 100%; max-height: 300px;">
+		</div>
+
+		<!-- Display the result of classification -->
+		<div id="result">
+			<h2 id="resultText">Prediction will appear here.</h2>
+		</div>
+
+		<section id="three" class="wrapper style2 special">
+			
+			<ul class="actions special">
+				<li><a href="/hospital" class="button">Get Hospitals!</a></li>
+			</ul>
+		</section>
+
+		<div class="wrapper row4">
+			<footer id="footer" class="clear">
+                <div class="one_quarter first">
+					<h6 class="title">College Details</h6>
+					<address class="btmspace-15">
+					MEA ENGINEERING COLLEGE.<br>
+					Computer Science Department<br>
+					Chemmaniyod, Perinthalmanna<br>
+					Malappuram, Kerala<br>
+					679325
+					</address>
+					<ul class="nospace">
+					  <li class="btmspace-10"><span class="fa fa-phone"></span> +91 8281987556</li>
+					  <li><span class="fa fa-envelope-o"></span> info@meaec.edu.in</li>
+				  <p><a href="http://meaec.edu.in/">Website &raquo;</a></p>
+					</ul>
+				  </div>
+				  <div class="one_quarter">
+					<h6 class="title">Guide Details</h6>
+					<ul class="nospace linklist">
+					  <li><b>Project Guide:</b></li>
+					  <li>Mrs. Najla Musthafa</li><br>
+					</ul>
+				  </div>
+				  <div class="one_quarter">
+					<h6 class="title">Team Details</h6>
+					<article>
+					  <li><b>Our Team:</b></li>
+					  <ul class="smallfont">
+						Minhaj Akavalappil<br>
+						Mohammed Aflah<br>
+						Mohammed Aseel<br>
+						Mohammed Jasim A.<br>
+					  </ul>
+					  
+					</article>
+				  </div>
+				  <div class="one_quarter">
+					<h6 class="title">Contact Details</h6>
+					<form method="get">
+					  <fieldset>        
+						<button ><a href="/contact">Contact Us!</a></button>
+					</fieldset>
+					</form>
+				  </div>
+			</footer>
+		</div>
+
+		<script src="{{ url_for('static', filename='classification/assets/js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='classification/assets/js/jquery.scrolly.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='classification/assets/js/browser.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='classification/assets/js/breakpoints.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='classification/assets/js/util.js') }}"></script>
+		<script src="{{ url_for('static', filename='classification/assets/js/main.js') }}"></script>
+
+		<script>
+			// Function to show the preview of the uploaded image
+			function previewImage() {
+				var fileInput = document.getElementById('fileInput');
+				var file = fileInput.files[0];
+
+				if (file) {
+					var reader = new FileReader();
+					reader.onload = function(event) {
+						var imagePreview = document.getElementById('imagePreview');
+						imagePreview.src = event.target.result;
+						document.getElementById('imagePreviewSection').style.display = 'block';
+					};
+					reader.readAsDataURL(file);
+				}
+			}
+
+			// Function to handle image upload and classification
+			function uploadImage() {
+				var fileInput = document.getElementById('fileInput');
+				var file = fileInput.files[0];
+				if (!file) {
+					alert("Please select an image file.");
+					return;
+				}
+
+				var formData = new FormData();
+				formData.append('file', file);
+
+				// Show loading message
+				var resultDiv = document.getElementById('result');
+				var resultText = document.getElementById('resultText');
+				resultDiv.style.display = 'none';
+				resultText.textContent = 'Processing...';
+				resultDiv.style.display = 'block';
+
+				// Make the POST request to the Flask backend
+				fetch('/classify', {
+					method: 'POST',
+					body: formData
+				})
+				.then(response => response.json())
+				.then(data => {
+					// Display the result
+					if (data.result) {
+						resultText.textContent = 'Prediction: ' + data.result;
+					} else if (data.error) {
+						resultText.textContent = 'Error: ' + data.error;
+					}
+				})
+				.catch(error => {
+					resultText.textContent = 'Error: ' + error;
+				});
+			}
+		</script>
+	</body>
+</html>

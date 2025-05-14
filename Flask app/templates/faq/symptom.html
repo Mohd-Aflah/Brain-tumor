@@ -1,0 +1,316 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Brain Tumor Symptom Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='faq/assets/css/main.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='faq/header_resn.css') }}" />
+    <noscript><link rel="stylesheet" href="{{ url_for('static', filename='faq/assets/css/noscript.css') }}" /></noscript>
+
+    <style>
+        /* Light grey background for the form */
+        form {
+            background-color: #f0f0f0; /* Light grey */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-in-out; /* Animation */
+        }
+
+        /* Animation effect */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Add transition for smooth effect when hovering over buttons */
+        button {
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #4CAF50; /* Change to a green shade when hovered */
+        }
+
+        /* Style for label to ensure proper spacing and visibility */
+        label {
+            font-size: 16px;
+            display: inline-block;
+            margin: 10px 0 5px;
+        }
+
+        /* Ensure space between select dropdowns and form fields */
+        .select-container {
+            margin-bottom: 15px;
+        }
+
+        select {
+            padding: 8px;
+            width: 10%;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 5px solid #575656;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        /* Add more padding between form fields */
+        form div {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header id="header">
+        <div class="content">
+            <h1><a href="#">Brain Tumor Symptom Checker</a></h1>
+            <ul class="actions">
+                <li><a href="/" class="button icon solid fa-chevron-home">Home</a></li>
+                <li><a href="/details" class="button icon solid fa-chevron-left">More details</a></li>
+                <li><a href="/faq" class="button icon solid fa-chevron-right">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="image phone"><div class="inner"><img src="{{ url_for('static', filename='faq/images/faq.gif')}}" alt="" /></div></div>
+    </header>
+
+    <section class="wrapper style2 special">
+         
+        <header class="major">
+            <h2>Symptom Checker</h2>
+            {% if tumor_chance is not none %}
+            <h2>Your tumor chance: {{ tumor_chance }}%</h2>
+            <p>{{ consultation_message }}</p>
+            {% endif %}
+            </header>
+
+        <form action="{{ url_for('symptom') }}" method="POST">
+            <!-- 1. Question -->
+            <div class="select-container">
+                <p>Answer the following questions to assess whether you may have symptoms related to a brain tumor. </br>
+                    Please note that this tool is not a diagnosis and should not replace professional medical advice.</p>    
+                <label for="headaches">Do you experience frequent headaches?</label>
+                <select name="headaches" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        
+            <!-- 2. Question -->
+            <div class="select-container">
+                <label for="dizziness">Do you experience dizziness or vertigo?</label>
+                <select name="dizziness" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        
+            <!-- 3. Question -->
+            <div class="select-container">
+                <label for="vision">Do you have trouble with your vision (blurred or double vision)?</label>
+                <select name="vision" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        
+            <!-- 4. Question -->
+            <div class="select-container">
+                <label for="difficulty_walking">Have you experienced any difficulty walking?</label>
+                <select name="difficulty_walking" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        
+            <!-- 5. Question -->
+            <div class="select-container">
+                <label for="nausea">Have you been feeling nausea or vomiting?</label>
+                <select name="nausea" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        
+            <!-- 6. Question -->
+            <div class="select-container">
+                <label for="memory_loss">Are you experiencing memory loss or confusion?</label>
+                <select name="memory_loss" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        
+            <!-- 7. Question -->
+            <div class="select-container">
+                <label for="head_trauma">Do you have a history of head trauma?</label>
+                <select name="head_trauma" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        
+            <!-- 8. Question -->
+            <div class="select-container">
+                <label for="tinnitus">Do you experience ringing in the ears (tinnitus)?</label>
+                <select name="tinnitus">
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        
+            <!-- 9. Question -->
+            <div class="select-container">
+                <label for="vision_changes">Do you have vision changes (blurry or tunnel vision)?</label>
+                <select name="vision_changes">
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        
+            <!-- 10. Question -->
+            <div class="select-container">
+                <label for="weight_loss">Have you had unexplained weight loss?</label>
+                <select name="weight_loss">
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        
+            <!-- 11. Question -->
+            <div class="select-container">
+                <label for="family_history">Do you have a family history of brain tumors?</label>
+                <select name="family_history">
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        
+            <!-- 12. Question -->
+            <div class="select-container">
+                <label for="mood_changes">Have you noticed sudden mood or emotional changes?</label>
+                <select name="mood_changes">
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        
+            <!-- 13. Question -->
+            <div class="select-container">
+                <label for="numbness">Do you experience numbness or weakness in your face, arms, or legs?</label>
+                <select name="numbness">
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        
+            <!-- 14. Question -->
+            <div class="select-container">
+                <label for="seizures">Have you experienced any seizures?</label>
+                <select name="seizures">
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        
+            <!-- 15. Question -->
+            <div class="select-container">
+                <label for="speech_problems">Do you have difficulty speaking or understanding speech?</label>
+                <select name="speech_problems">
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        
+            <!-- 16. Question -->
+            <div class="select-container">
+                <label for="coordination">Are you experiencing difficulty with coordination or balance?</label>
+                <select name="coordination">
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        
+            <!-- 17. Question -->
+            <div class="select-container">
+                <label for="swelling">Have you noticed swelling or bulging in your eyes?</label>
+                <select name="swelling">
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        
+            <!-- 18. Question -->
+            <div class="select-container">
+                <label for="nausea_morning">Do you experience morning nausea or vomiting?</label>
+                <select name="nausea_morning">
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        
+            <!-- 19. Question -->
+            <div class="select-container">
+                <label for="persistent_headache">Have you had persistent headaches that do not go away?</label>
+                <select name="persistent_headache">
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        
+            <!-- 20. Question -->
+            <div class="select-container">
+                <label for="fever">Have you experienced any unexplained fever?</label>
+                <select name="fever">
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        
+            <button type="submit">Submit Symptoms</button>
+        </form>
+        
+
+       
+
+    </section>
+
+    <footer id="footer" class="clear">
+        <p>&copy; 2025 MEA Engineering College. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='faq/assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='faq/assets/js/jquery.scrolly.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='faq/assets/js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='faq/assets/js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='faq/assets/js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='faq/assets/js/main.js') }}"></script>
+</body>
+</html>

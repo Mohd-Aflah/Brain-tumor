@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Brain Tumor Detection and Segmentation Using EfficientNet and YOLOv8</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{{ url_for('static', filename='layout/styles/layout.css')}}" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="{{ url_for('static', filename='font/flaticon.css')}}">
+</head>
+
+<body id="top" class="homepage">
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="logo" class="fl_left"> 
+      <h1><a href="/">Brain Tumor Detection and Segmentation Using EfficientNet and YOLOv8</a></h1>
+    </div>
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="/">Home</a></li>
+        <li><a class="drop" href="#">Information</a>
+          <ul>
+            <li><a href="/hospital">Hospital Information</a></li>
+	          <li><a href="/faq">FAQ's</a></li>
+            <li><a href="/details">Brain Tumor Details</a></li>
+            <li><a href="/symptom">Symptom checker</a></li>
+          </ul>
+        </li>
+        <li class="active"><a href="/contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+
+<div id="slider">
+  <div class="flexslider basicslider">
+    <ul class="slides">
+      <li class="bgded" style="background-image:url('../static/images/demo/slider/01.jpg')">
+        <article class="flex-content">
+          <h2 class="heading underlined">Brain Tumor Classification</h2>
+          <p><a href="/classification" class="btn" style="margin:10px" width:"200px" href="#">Brain Tumor Classification</a>
+        </article>
+      </li>
+      <li class="bgded" style="background-image:url('../static/images/demo/slider/02.jpg')">
+        <article class="flex-content">
+          <h2 class="heading underlined">Brain Tumor Segmentation</h2>
+			 <a class="btn" href="/segmentation" style="margin:10px" width:"200px" href="#">Brain Tumor Segmentation</a></p>	
+        </article>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="wrapper row3">
+  <main class="container clear"> 
+    <div class="center clear">
+      <div class="btmspace-80">
+        <h2 class="font-x2 bold underlined">Abstract</h2>
+        <p>
+         Brain tumors remain a critical challenge in the medical domain due to their heterogeneous nature and complex imaging characteristics. 
+         This paper explores an advanced framework combining transfer learning with EfficientNet and YOLO for precise tumor classification and segmentation.
+         The EfficientNet-B0 model is fine-tuned using transfer learning to classify tumors into four categories: glioma, meningioma, pituitary, and no tumor. 
+         YOLOv8 is employed for high-speed, real-time segmentation.
+         Transfer learning enhances model generalization by leveraging pre-trained weights, reducing training time, and improving performance on limited medical imaging datasets.
+         Extensive experiments demonstrate superior performance in terms of accuracy, computational efficiency, and practical applications.
+         This framework addresses the critical need for early and accurate tumor diagnosis, reducing the workload on medical professionals and improving treatment outcomes.
+        </p>
+      </div>
+      <div class="group">
+        <h2 class="font-x2 bold underlined">Objectives</h2>
+        <article class="one_quarter ">
+          <p>.</p>
+        </article>
+        <article class="one_quarter"><a href="#"><i class="btmspace-15 fa fa-3x flaticon-brain-2"></i></a>
+          <h4 class="font-x1 underlined">Tumor Classification</h4>
+          <p>To classify tumors using Transfer Learning Classification Algorithms.</p>
+        </article>
+        <article class="one_quarter"><a href="#"><i class="btmspace-15 fa fa-3x flaticon-human-brain"></i></a>
+          <h4 class="font-x1 underlined">Tumor Segmentation</h4>
+          <p>Using YOLO to identify the Tumor affected region.</p>
+        </article>
+        <article class="one_quarter ">
+          <p>.</p>
+        </article>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </main>
+</div>
+
+<div class="wrapper row3"></div>
+  <section class="container clear"> 
+    <div class="btmspace-80 center">
+      <h2 class="font-x2 bold underlined">Categories</h2>
+      <p>Different types of tumors and their characteristics.
+         A pituitary tumor can be a glioma if it originates from glial cells in the pituitary gland,
+        though this is less common.
+        Meningiomas are tumors that develop from the meninges, the layers of tissue that cover the brain and spinal cord.</p>
+    </div>
+    <div class="group latest">
+      <article class="one_quarter first">
+        <figure><img src="{{ url_for('static', filename='images/demo/nt.jpg')}}" alt="">
+        </figure>
+        <h3 class="font-x1 heading">No Tumor</h3>
+        <p>No tumor means that there is no abnormal growth or mass of cells, in the brain tissue. indicating the absence of both benign and malignant brain tumors.</p>
+      </article>
+      <article class="one_quarter">
+        <figure><img src="{{ url_for('static', filename='images/demo/gt.jpg')}}" alt="">
+        </figure>
+        <h3 class="font-x1 heading">Glioma Tumor</h3>
+        <p>A glioma is a tumor arising from glial cells in the brain or spinal cord. Malignant gliomas are aggressive and may cause headaches, seizures, and neurological issues.</p>
+        <p><a href="https://en.wikipedia.org/wiki/Glioma">Read More &raquo;</a></p>
+      </article>
+      <article class="one_quarter">
+        <figure><img src="{{ url_for('static', filename='images/demo/mt.jpg')}}" alt="">
+        </figure>
+        <h3 class="font-x1 heading">Meningioma Tumor</h3>
+        <p>A Meningioma tumor is cancerous, capable of invading nearby tissues and spreading to other areas of the body, requiring aggressive treatment like surgery, chemotherapy, or radiation.</p>
+        <p><a href="https://en.wikipedia.org/wiki/meningioma">Read More &raquo;</a></p>
+      </article>
+      <article class="one_quarter">
+        <figure><img src="{{ url_for('static', filename='images/demo/pt.jpg')}}" alt="">
+        </figure>
+        <h3 class="font-x1 heading">Pituitary Tumor</h3>
+        <p>A pituitary tumor is an abnormal growth in the pituitary gland. It can cause hormonal imbalances, vision problems, and headaches. Meningioma pituitary tumors are rare but serious.</p>
+        <p><a href="https://en.wikipedia.org/wiki/Pituitary_adenoma">Read More &raquo;</a></p>
+      </article>
+    </div>
+    <div class="clear"></div>
+  </section>
+</div>
+
+
+<div class="wrapper row4">
+  <footer id="footer" class="clear"> 
+    <div class="one_quarter first">
+      <h6 class="title">College Details</h6>
+      <address class="btmspace-15">
+      MEA ENGINEERING COLLEGE.<br>
+      Computer Science Department<br>
+      Chemmaniyod, Perinthalmanna<br>
+      Malappuram, Kerala<br>
+      679325
+      </address>
+      <ul class="nospace">
+        <li class="btmspace-10"><span class="fa fa-phone"></span> +91 8281987556</li>
+        <li><span class="fa fa-envelope-o"></span> info@meaec.edu.in</li>
+	<p><a href="http://meaec.edu.in/">Website &raquo;</a></p>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="title">Guide Details</h6>
+      <ul class="nospace linklist">
+        <li><b>Project Guide:</b></li>
+        <li>Mrs. Najla Musthafa</li><br>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="title">Team Details</h6>
+      <article>
+        <li><b>Our Team:</b></li>
+        <ul class="smallfont">
+          Minhaj Akavalappil<br>
+          Mohammed Aflah<br>
+          Mohammed Aseel<br>
+          Mohammed Jasim A.<br>
+        </ul>
+      </article>
+    </div>
+    <div class="one_quarter">
+      <h6 class="title">Contact Details</h6>
+      <form method="get">
+        <fieldset>        
+          <button ><a href="/contact">Contact Us!</a></button>
+        </fieldset>
+      </form>
+    </div>
+  </footer>
+</div>
+
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<script src="{{ url_for('static', filename='layout/scripts/jquery.min.js')}}"></script>
+<script src="{{ url_for('static', filename='layout/scripts/jquery.backtotop.js')}}"></script>
+<script src="{{ url_for('static', filename='layout/scripts/jquery.mobilemenu.js')}}"></script>
+<script src="{{ url_for('static', filename='layout/scripts/jquery.placeholder.min.js')}}"></script>
+<script src="{{ url_for('static', filename='layout/scripts/jquery.flexslider-min.js')}}"></script>
+<script src="{{ url_for('static', filename='layout/scripts/jquery.easypiechart.min.js')}}"></script>
+<div id="preloader"><div></div></div>
+<script>$(window).load(function(){$("#preloader div").delay(500).fadeOut();$("#preloader").delay(800).fadeOut("slow");});</script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Complete Details of Brain Tumor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='faq/assets/css/main.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='faq/header_resn.css') }}" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+        }
+        header h1 {
+            text-align: left;
+            font-size: 2rem;
+            margin: 0;
+        }
+        header ul.actions {
+            text-align: left;
+        }
+        header ul.actions li {
+            display: inline;
+            margin-right: 10px;
+        }
+        header a.button {
+            color: #fff;
+            background-color: #444;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+        }
+        header a.button:hover {
+            background-color: #666;
+        }
+        .wrapper {
+            padding: 2rem;
+            margin: 0;
+            background: #fff;
+        }
+        .wrapper h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .inner {
+            text-align: left;
+        }
+        h3 {
+            font-size: 1.6rem;
+            color: #444;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        #tumor-details {
+            margin-top: 20px;
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="content">
+            <h1><a href="#">Brain Tumor - Complete Details</a></h1>
+            <ul class="actions">
+                <li><a href="/" class="button icon solid fa-chevron-home">Home</a></li>
+                <li><a href="/faq" class="button icon solid fa-chevron-left">FAQ</a></li>
+                <li><a href="/symptom" class="button icon solid fa-chevron-right">Symptom Checker</a></li>
+            </ul>
+        </div>
+        <div class="image phone"><div class="inner"><img src="{{ url_for('static', filename='faq/images/faq.gif')}}" alt="" /></div></div>
+    </header>
+
+    <section class="wrapper style2 special">
+        <header class="major">
+            <h2>Complete Details of Brain Tumor</h2>
+        </header>
+        <div class="inner">
+            <h3>What is a Brain Tumor?</h3>
+            <p>A brain tumor is an abnormal growth of cells in the brain, which can be benign (non-cancerous) or malignant (cancerous). It may originate from brain tissue or spread from other parts of the body (metastatic brain tumors). The exact cause of brain tumors is not known, but some genetic mutations and environmental factors may contribute.</p>
+
+
+            <h3>Select Tumor Type to Learn More:</h3>
+            <select id="tumor-selector">
+                <option value="none">Select a Tumor Type</option>
+                <option value="glioma">Glioma</option>
+                <option value="meningioma">Meningioma</option>
+                <option value="pituitary">Pituitary Tumor</option>
+            </select>
+
+            <div id="tumor-details">
+                <h3>Details will appear here</h3>
+                <p>Select a tumor type from the dropdown above to view detailed information about that tumor.</p>
+            </div>
+
+            <h3>Risk Factors</h3>
+            <p>While the exact cause of brain tumors is unclear, certain factors can increase the risk of developing one:</p>
+            <ul>
+                <li><strong>Genetic predisposition:</strong> A family history of brain tumors or specific inherited syndromes may increase risk.</li>
+                <li><strong>Radiation exposure:</strong> Previous radiation therapy to the head may increase the likelihood of developing a brain tumor.</li>
+                <li><strong>Environmental factors:</strong> Exposure to certain chemicals or substances, such as pesticides or solvents, may also be linked to higher risks.</li>
+                <li><strong>Age and gender:</strong> Brain tumors are more common in older adults, but certain types (e.g., medulloblastomas) affect children. Gender can also play a role, with men being more likely to develop certain types.</li>
+            </ul>
+
+            <h3>Symptoms of Brain Tumor</h3>
+            <p>The symptoms of brain tumors vary depending on the tumor’s location, size, and rate of growth. Some common signs include:</p>
+            <ul>
+                <li>Persistent headaches, which may worsen over time or with certain activities</li>
+                <li>Seizures, which may occur suddenly and without warning</li>
+                <li>Vision or hearing problems, such as blurry vision or ringing in the ears</li>
+                <li>Speech or language difficulties, such as trouble finding words or understanding speech</li>
+                <li>Memory loss, confusion, or cognitive difficulties, which can worsen as the tumor grows</li>
+            </ul>
+
+            <h3>Treatment Options</h3>
+            <p>The treatment approach for brain tumors depends on various factors, including the tumor's size, location, and type, as well as the patient's health. Some common treatment methods are:</p>
+            <ul>
+                <li><strong>Surgery:</strong> The primary treatment for many brain tumors, where the tumor is surgically removed when possible.</li>
+                <li><strong>Radiation therapy:</strong> High-energy rays or particles are used to destroy cancerous cells or shrink tumors.</li>
+                <li><strong>Chemotherapy:</strong> The use of drugs to kill or slow down the growth of tumor cells.</li>
+                <li><strong>Targeted therapy:</strong> Treatments that target specific genes or proteins involved in the growth of the tumor.</li>
+                <li><strong>Immunotherapy:</strong> Uses the body's immune system to fight the tumor cells.</li>
+            </ul>
+
+            <h3>Prevention and Prognosis</h3>
+            <p>There is no guaranteed way to prevent brain tumors, but maintaining a healthy lifestyle, reducing radiation exposure, and addressing genetic risks may help lower the likelihood of developing one. Early diagnosis and treatment can significantly improve prognosis, especially for benign tumors or tumors that are discovered at an early stage.</p>
+        </div>
+    </section>
+
+    <footer id="footer" class="clear">
+        <p>&copy; 2025 MEA Engineering College. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='faq/assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='faq/assets/js/jquery.scrolly.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='faq/assets/js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='faq/assets/js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='faq/assets/js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='faq/assets/js/main.js') }}"></script>
+
+    <script>
+        const tumorSelector = document.getElementById('tumor-selector');
+        const tumorDetails = document.getElementById('tumor-details');
+
+        tumorSelector.addEventListener('change', function() {
+            let details = "";
+            if (this.value === "glioma") {
+                details = `
+                    <h3>Glioma</h3>
+                    <p>Gliomas are tumors that begin in the glial cells, the supportive cells of the brain. They are among the most common and aggressive types of brain tumors. Gliomas include glioblastomas, astrocytomas, and oligodendrogliomas, and are often treated with surgery, radiation, and chemotherapy.</p>
+                    <ul>
+                        <li><strong>Common Symptoms:</strong> Seizures, headaches, weakness, and cognitive impairments.</li>
+                        <li><strong>Treatment:</strong> Surgery to remove the tumor, followed by radiation and chemotherapy depending on the tumor's type and grade.</li>
+                    </ul>
+                `;
+            } else if (this.value === "meningioma") {
+                details = `
+                    <h3>Meningioma</h3>
+                    <p>Meningiomas are tumors that develop from the meninges, the layers of tissue that cover the brain and spinal cord. These tumors are typically slow-growing and can be benign or malignant. Most meningiomas are benign and can be removed surgically.</p>
+                    <ul>
+                        <li><strong>Common Symptoms:</strong> Headaches, blurred vision, seizures, and memory problems.</li>
+                        <li><strong>Treatment:</strong> Surgical removal is the primary treatment, but radiation may be used if the tumor is inoperable or recurrent.</li>
+                    </ul>
+                `;
+            } else if (this.value === "pituitary") {
+                details = `
+                    <h3>Pituitary Tumor</h3>
+                    <p>Pituitary tumors are growths that form in the pituitary gland, located at the base of the brain. The pituitary gland controls many hormone functions, and these tumors can cause hormonal imbalances that affect the entire body.</p>
+                    <ul>
+                        <li><strong>Common Symptoms:</strong> Vision problems, headaches, fatigue, and hormonal changes like unexplained weight gain or loss.</li>
+                        <li><strong>Treatment:</strong> Surgery is often required to remove the tumor, though medication or radiation may be used for hormone-related tumors.</li>
+                    </ul>
+                `;
+            } else {
+                details = "<h3>Details will appear here</h3><p>Select a tumor type from the dropdown above to view detailed information about that tumor.</p>";
+            }
+
+            tumorDetails.innerHTML = details;
+        });
+    </script>
+
+</body>
+</html>

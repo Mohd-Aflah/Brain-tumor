@@ -1,0 +1,55 @@
+@charset "utf-8";
+/*
+Template Name: Splash
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+File: Custom Flexslider CSS
+*/
+
+/* Browser Resets
+--------------------------------------------------------------------------------------------------------------- */
+.flex-container a:active, .flexslider a:active, .flex-container a:focus, .flexslider a:focus{outline:none;}
+.slides, .flex-direction-nav{margin:0; padding:0; list-style:none;}
+
+
+/* FlexSlider Necessary Styles
+--------------------------------------------------------------------------------------------------------------- */
+.flexslider{display:block; position:relative; width:100%; height:100%; margin:0; padding:0;}
+.flexslider .slides{display:block; position:relative; width:100%; height:100%; white-space:nowrap;}
+.flexslider .slides > li{display:none; position:relative; -webkit-backface-visibility:hidden;}
+
+.slides::before, .slides::after{display:table; content:"";}
+.slides::after{clear:both;}
+
+
+/* FlexSlider Default Theme
+--------------------------------------------------------------------------------------------------------------- */
+.flex-viewport{max-height:2000px; transition:all 1s ease;}
+.loading .flex-viewport{max-height:300px;}
+
+/* Direction Nav */
+.flex-direction-nav{*height:0;}
+.flex-direction-nav a{display:block; position:absolute; top:50%; width:40px; height:40px; margin:-20px 0 0; z-index:10; overflow:hidden; text-decoration:none; opacity:0; cursor:pointer; color:rgba(255,255,255,0.8); text-shadow:1px 1px 0 rgba(255,255,255,0.3); transition:all .3s ease;}
+.flex-direction-nav .flex-prev{left:10px;}
+.flex-direction-nav .flex-next{right:10px;}
+.flexslider:hover .flex-prev, .flexslider:hover .flex-next{opacity:0.5;}
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover{opacity:1;}
+.flex-direction-nav .flex-disabled{opacity:0 !important; cursor:default;}
+.flex-direction-nav a::before{font-family:"FontAwesome"; font-size:40px; line-height:1; display:inline-block; content:"\f053";}
+.flex-direction-nav a.flex-next::before{content:"\f054";}
+
+
+/* Basic Slider Content
+--------------------------------------------------------------------------------------------------------------- */
+.basicslider{}
+.basicslider .slides{}
+.basicslider .slides li{height:100%;}
+.basicslider .slides li::after{display:block; position:absolute; top:0; left:0; width:100%; height:100%; content:"";}
+.basicslider .slides li .flex-content{display:block; position:relative; max-width:978px; margin:0 auto; padding:325px 0; text-align:center; z-index:1;}
+.basicslider .slides li .flex-content *{margin:0; white-space:normal; word-wrap:break-word; font-family:Arial, Helvetica, sans-serif; line-height:1;}
+.basicslider .slides li .flex-content .heading{font-size:100px; font-weight:bold;}
+.basicslider .slides li .flex-content .heading.underlined{margin-bottom:50px; padding-bottom:35px;}
+.basicslider .slides li .flex-content .heading.underlined::after{width:20%; height:5px; margin-left:-10%; content:"";}
+.basicslider .slides li .flex-content p:first-of-type{max-width:75%; margin:0 auto 50px; font-size:18px; line-height:1.4;}

@@ -1,0 +1,13 @@
+Flask
+numpy
+opencv-python
+Pillow
+tensorflow
+matplotlib
+pandas
+seaborn
+tqdm
+scikit-learn
+ipywidgets
+ultralytics
+roboflow

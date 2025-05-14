@@ -1,0 +1,745 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Hospitals</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="../css/hospital page/css/bootstrap.min.css">
+     <link rel="stylesheet" href="../css/hospital page/css/font-awesome.min.css">
+     <link rel="stylesheet" href="../css/hospital page/css/animate.css">
+     <link rel="stylesheet" href="../css/hospital page/css/owl.carousel.css">
+     <link rel="stylesheet" href="../css/hospital page/css/owl.theme.default.min.css">
+	 <link rel="stylesheet" type="text/css" href="../css/hospital page/header_resn.css">
+     <link rel="stylesheet" type="text/css" href="../css/hospital page/footer.css">
+     <link rel="stylesheet" href="../css/hospital page/css/tooplate-style.css">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <div class="headerdiv">
+        <a href="../index.html" class="title">Brain Tumor Detection and Segmentation Using EfficientNet and YOLOv8</a>
+
+        <div class="header-right">
+            <a id="home" href="../index.html">Home</a>
+            
+            <div class="dropdown-header">
+                <button class="dropbtn-header">INFORMATION 
+                </button>
+                <div class="dropdown-content-header">
+                    <li> <a href="../faq/index.html">FAQ's</a>
+                    <a href="../Contact us/Contact.html">Contact Us</a></li>
+                </div>
+            </div>         
+       </div>
+    </div>
+
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+          </div>
+     </section>
+       
+     <section id="home" class="slider" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+                         <div class="owl-carousel owl-theme">
+                              <div class="item item-first">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h3>Embrace a healthy life for lasting</h3>
+                                             <h1>Recovery</h1>
+                                             <a href="#team" class="section-btn btn btn-default smoothScroll">Hospitals</a>
+                                             <a href="#financial-assistance" class="section-btn btn btn-default smoothScroll">financial-assistance</a>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="item item-second">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h3>Good health is the foundation of a</h3>
+                                             <h1>Healing journey</h1>
+					                                             <a href="#team" class="section-btn btn btn-default smoothScroll">Hospitals</a>
+                                                                 <a href="#financial-assistance" class="section-btn btn btn-default smoothScroll">financial-assistance</a>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="item item-third">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h3> A healthy life is a step towards</h3>
+                                             <h1>Well-being</h1>
+						                                             <a href="#team" class="section-btn btn btn-default smoothScroll">Hospitals</a>
+                                                                     <a href="#financial-assistance" class="section-btn btn btn-default smoothScroll">financial-assistance</a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+               </div>
+          </div>
+     </section>
+
+     <section id="about">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                         <div class="about-info">
+                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Welcome to Health info Center</h2>
+                              <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                   <p>The hospital information page.</p>
+                                   <p>Information of few hospital is provided below along with their contact details.</p>
+                                   <p>We care.</p>
+                              </div>
+                              
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <section id="team" data-stellar-background-ratio="1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="about-info">
+                        <h2 class="wow fadeInUp" data-wow-delay="0.1s">Top Brain Tumor Hospitals in India</h2>
+                    </div>
+                </div>
+    
+                <!-- State Selection Dropdown -->
+                <div class="col-md-12 text-center">
+                    <div class="state-selection">
+                        <label for="state-select" style="font-size: 16px; margin-right: 10px;">Select State:</label>
+                        <select id="state-select" class="form-control" style="display: inline-block; width: 200px; font-size: 14px;">
+                            <option value="all">All States</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="West Bengal">West Bengal</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Gujarat">Gujarat</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <!-- Top Hospitals - Display the first 9 hospitals initially -->
+                <div id="hospitals-list">
+                    
+                    <!-- Delhi -->
+                    <div class="col-md-4 col-sm-6 hospital-item" data-state="Delhi">
+                        <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-info">
+                                <h3>AIIMS</h3>
+                                <p>Premier Neurosurgery Institute, renowned for Brain Tumor treatments</p>
+                                <p>New Delhi, India</p>
+                                <p>011 2658 8500</p>
+                                <p><a href="https://www.aiims.edu" target="_blank">Website</a></p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4 col-sm-6 hospital-item" data-state="Delhi">
+                        <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-info">
+                                <h3>Max Super Specialty</h3>
+                                <p>Leading Brain Tumor Surgery Center</p>
+                                <p>New Delhi, India</p>
+                                <p>011 2651 5050</p>
+                                <p><a href="https://www.maxhealthcare.in" target="_blank">Website</a></p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4 col-sm-6 hospital-item" data-state="Delhi">
+                        <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-info">
+                                <h3>BLK Super Speciality</h3>
+                                <p>Advanced Brain Tumor Treatments</p>
+                                <p>New Delhi, India</p>
+                                <p>011 3040 3040</p>
+                                <p><a href="https://www.blkhospital.com" target="_blank">Website</a></p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4 col-sm-6 hospital-item" data-state="Delhi">
+                        <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-info">
+                                <h3>Fortis Escorts</h3>
+                                <p>Comprehensive Brain Tumor Care</p>
+                                <p>New Delhi, India</p>
+                                <p>011 4711 1111</p>
+                                <p><a href="https://www.fortishealthcare.com" target="_blank">Website</a></p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4 col-sm-6 hospital-item" data-state="Delhi">
+                        <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-info">
+                                <h3>Indraprastha Apollo</h3>
+                                <p>State-of-the-art Brain Tumor Care</p>
+                                <p>New Delhi, India</p>
+                                <p>011 4171 5000</p>
+                                <p><a href="https://www.apollohospitals.com" target="_blank">Website</a></p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Haryana -->
+                    <div class="col-md-4 col-sm-6 hospital-item" data-state="Haryana">
+                        <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-info">
+                                <h3>Fortis Memorial</h3>
+                                <p>Comprehensive Brain Tumor Care & Neurosurgery Services</p>
+                                <p>Gurgaon, Haryana, India</p>
+                                <p>0124 425 0000</p>
+                                <p><a href="https://www.fortishealthcare.com" target="_blank">Website</a></p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4 col-sm-6 hospital-item" data-state="Haryana">
+                        <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-info">
+                                <h3>Medanta</h3>
+                                <p>Leading Brain Tumor Care Center</p>
+                                <p>Gurgaon, Haryana, India</p>
+                                <p>0124 414 1414</p>
+                                <p><a href="https://www.medanta.org" target="_blank">Website</a></p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4 col-sm-6 hospital-item" data-state="Haryana">
+                        <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-info">
+                                <h3>Fortis Healthcare</h3>
+                                <p>Expert Brain Tumor Surgery and Care</p>
+                                <p>Gurgaon, Haryana, India</p>
+                                <p>0124 270 7600</p>
+                                <p><a href="https://www.fortishealthcare.com" target="_blank">Website</a></p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4 col-sm-6 hospital-item" data-state="Haryana">
+                        <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-info">
+                                <h3>Artemis Hospital</h3>
+                                <p>Advanced Brain Tumor Surgery</p>
+                                <p>Gurgaon, Haryana, India</p>
+                                <p>0124 451 1111</p>
+                                <p><a href="https://www.artemishospitals.com" target="_blank">Website</a></p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Maharashtra -->
+                    <div class="col-md-4 col-sm-6 hospital-item" data-state="Maharashtra">
+                        <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-info">
+                                <h3>Nanavati Max</h3>
+                                <p>State-of-the-art Brain Tumor Care</p>
+                                <p>Mumbai, Maharashtra, India</p>
+                                <p>022 2626 7537</p>
+                                <p><a href="https://www.nanavatimaxhospital.org" target="_blank">Website</a></p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4 col-sm-6 hospital-item" data-state="Maharashtra">
+                        <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-info">
+                                <h3>Care Clinic</h3>
+                                <p>Specialized Brain Tumor Treatment</p>
+                                <p>Mumbai, Maharashtra, India</p>
+                                <p>022 2352 3022</p>
+                                <p><a href="https://www.careclinic.in" target="_blank">Website</a></p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4 col-sm-6 hospital-item" data-state="Maharashtra">
+                        <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-info">
+                                <h3>Brain & Spine Center</h3>
+                                <p>Comprehensive care for Brain Tumors & Neurosurgical Services</p>
+                                <p>Mumbai, Maharashtra, India</p>
+                                <p>022 2482 4660</p>
+                                <p><a href="https://www.brainandspinecenter.com" target="_blank">Website</a></p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4 col-sm-6 hospital-item" data-state="Maharashtra">
+                        <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-info">
+                                <h3>Asian Heart Institute</h3>
+                                <p>Expert Brain Tumor Care</p>
+                                <p>Mumbai, Maharashtra, India</p>
+                                <p>022 6690 5000</p>
+                                <p><a href="https://www.asianheartinstitute.org" target="_blank">Website</a></p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Karnataka -->
+                    <div class="col-md-4 col-sm-6 hospital-item" data-state="Karnataka">
+                        <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-info">
+                                <h3>Manipal Hospital</h3>
+                                <p>Comprehensive Neurosurgery & Brain Tumor Treatments</p>
+                                <p>Bangalore, Karnataka, India</p>
+                                <p>080 2222 7777</p>
+                                <p><a href="https://www.manipalhospitals.com" target="_blank">Website</a></p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4 col-sm-6 hospital-item" data-state="Karnataka">
+                        <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-info">
+                                <h3>Narayana Health</h3>
+                                <p>Brain Tumor & Neurosurgical Treatments</p>
+                                <p>Bangalore, Karnataka, India</p>
+                                <p>080 6611 5555</p>
+                                <p><a href="https://www.narayanahealth.org" target="_blank">Website</a></p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4 col-sm-6 hospital-item" data-state="Karnataka">
+                        <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-info">
+                                <h3>Fortis La Femme</h3>
+                                <p>Specialized in Neurosurgery for Brain Tumors</p>
+                                <p>Bangalore, Karnataka, India</p>
+                                <p>080 6611 5555</p>
+                                <p><a href="https://www.fortishealthcare.com" target="_blank">Website</a></p>
+                            </div>
+                        </div>
+                    </div>
+    
+            <!-- Tamil Nadu -->
+            <div class="col-md-4 col-sm-6 hospital-item" data-state="Tamil Nadu">
+                <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-info">
+                        <h3>CMC Vellore</h3>
+                        <p>Specialized in Brain Tumor Treatments & Neurosurgery</p>
+                        <p>Vellore, Tamil Nadu, India</p>
+                        <p>0416 228 1000</p>
+                        <p><a href="https://www.cmch-vellore.edu" target="_blank">Website</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 hospital-item" data-state="Tamil Nadu">
+                <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-info">
+                        <h3>Global Hospitals</h3>
+                        <p>Comprehensive Brain Tumor Care and Surgery</p>
+                        <p>Chennai, Tamil Nadu, India</p>
+                        <p>044 4000 6000</p>
+                        <p><a href="https://www.globalhospitalsindia.com" target="_blank">Website</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 hospital-item" data-state="Tamil Nadu">
+                <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-info">
+                        <h3>MIOT International</h3>
+                        <p>Advanced Brain Tumor Treatment</p>
+                        <p>Chennai, Tamil Nadu, India</p>
+                        <p>044 4200 4200</p>
+                        <p><a href="https://www.miotinternational.com" target="_blank">Website</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 hospital-item" data-state="Tamil Nadu">
+                <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-info">
+                        <h3>Vijaya Hospital</h3>
+                        <p>Neurosurgery for Brain Tumors</p>
+                        <p>Chennai, Tamil Nadu, India</p>
+                        <p>044 2486 6556</p>
+                        <p><a href="https://www.vijayahospitals.com" target="_blank">Website</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kerala -->
+            <div class="col-md-4 col-sm-6 hospital-item" data-state="Kerala">
+                <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-info">
+                        <h3>Amrita Institute of Medical Sciences</h3>
+                        <p>Brain Tumor Surgery & Neurosurgical Care</p>
+                        <p>Kochi, Kerala, India</p>
+                        <p>0484 280 1234</p>
+                        <p><a href="https://www.amrita.edu" target="_blank">Website</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 hospital-item" data-state="Kerala">
+                <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-info">
+                        <h3>Medical Trust Hospital</h3>
+                        <p>Advanced Brain Tumor and Neurosurgery Treatments</p>
+                        <p>Kochi, Kerala, India</p>
+                        <p>0484 280 0100</p>
+                        <p><a href="https://www.medicaltrusthospital.org" target="_blank">Website</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 hospital-item" data-state="Kerala">
+                <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-info">
+                        <h3>Little Flower Hospital</h3>
+                        <p>Brain Tumor Care & Neurosurgery</p>
+                        <p>Angamaly, Kerala, India</p>
+                        <p>0484 245 1444</p>
+                        <p><a href="https://www.lfhospital.org" target="_blank">Website</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Uttar Pradesh -->
+            <div class="col-md-4 col-sm-6 hospital-item" data-state="Uttar Pradesh">
+                <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-info">
+                        <h3>Medanta Lucknow</h3>
+                        <p>Brain Tumor and Neurosurgery Services</p>
+                        <p>Lucknow, Uttar Pradesh, India</p>
+                        <p>0522 488 8888</p>
+                        <p><a href="https://www.medanta.org" target="_blank">Website</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 hospital-item" data-state="Uttar Pradesh">
+                <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-info">
+                        <h3>King George's Medical University</h3>
+                        <p>Brain Tumor Care and Surgery</p>
+                        <p>Lucknow, Uttar Pradesh, India</p>
+                        <p>0522 225 7471</p>
+                        <p><a href="https://www.kgmu.org" target="_blank">Website</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 hospital-item" data-state="Uttar Pradesh">
+                <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-info">
+                        <h3>Medanta Hospital Noida</h3>
+                        <p>Specialized Brain Tumor and Neurosurgery Care</p>
+                        <p>Noida, Uttar Pradesh, India</p>
+                        <p>0120 425 8000</p>
+                        <p><a href="https://www.medanta.org" target="_blank">Website</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- West Bengal -->
+            <div class="col-md-4 col-sm-6 hospital-item" data-state="West Bengal">
+                <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-info">
+                        <h3>AMRI Hospitals</h3>
+                        <p>Brain Tumor Treatment & Neurosurgery</p>
+                        <p>Kolkata, West Bengal, India</p>
+                        <p>033 6622 2222</p>
+                        <p><a href="https://www.amrihospitals.in" target="_blank">Website</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 hospital-item" data-state="West Bengal">
+                <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-info">
+                        <h3>Apollo Gleneagles</h3>
+                        <p>Comprehensive Brain Tumor Care and Surgery</p>
+                        <p>Kolkata, West Bengal, India</p>
+                        <p>033 6634 6666</p>
+                        <p><a href="https://www.apollogleneagles.in" target="_blank">Website</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 hospital-item" data-state="West Bengal">
+                <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-info">
+                        <h3>AMRI Salt Lake</h3>
+                        <p>Brain Tumor Care</p>
+                        <p>Kolkata, West Bengal, India</p>
+                        <p>033 6600 1300</p>
+                        <p><a href="https://www.amrihospitals.in" target="_blank">Website</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Andhra Pradesh -->
+            <div class="col-md-4 col-sm-6 hospital-item" data-state="Andhra Pradesh">
+                <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-info">
+                        <h3>Care Hospital</h3>
+                        <p>Brain Tumor Care & Neurosurgery</p>
+                        <p>Hyderabad, Andhra Pradesh, India</p>
+                        <p>040 4003 3333</p>
+                        <p><a href="https://www.carehospitals.com" target="_blank">Website</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 hospital-item" data-state="Andhra Pradesh">
+                <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-info">
+                        <h3>Narayana Health</h3>
+                        <p>Brain Tumor Treatment & Neurosurgical Care</p>
+                        <p>Hyderabad, Andhra Pradesh, India</p>
+                        <p>040 4033 3333</p>
+                        <p><a href="https://www.narayanahealth.org" target="_blank">Website</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gujarat -->
+            <div class="col-md-4 col-sm-6 hospital-item" data-state="Gujarat">
+                <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-info">
+                        <h3>GCS Hospital</h3>
+                        <p>Brain Tumor Surgery & Neurosurgery Services</p>
+                        <p>Ahmedabad, Gujarat, India</p>
+                        <p>079 3026 9999</p>
+                        <p><a href="https://www.gcshospital.com" target="_blank">Website</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 hospital-item" data-state="Gujarat">
+                <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-info">
+                        <h3>Shree Krishna Hospital</h3>
+                        <p>Specialized Neurosurgery for Brain Tumors</p>
+                        <p>Ahmedabad, Gujarat, India</p>
+                        <p>079 4020 4777</p>
+                        <p><a href="https://www.skhospital.com" target="_blank">Website</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 hospital-item" data-state="Gujarat">
+                <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-info">
+                        <h3>Asian Institute of Neurosurgery</h3>
+                        <p>Brain Tumor Care and Neurosurgery</p>
+                        <p>Vadodara, Gujarat, India</p>
+                        <p>0265 235 7777</p>
+                        <p><a href="https://www.asianneuro.org" target="_blank">Website</a></p>
+                    </div>
+                </div>
+            </div>    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Filter hospitals by state
+        document.getElementById('state-select').addEventListener('change', function() {
+            var state = this.value;
+            var hospitals = document.querySelectorAll('.hospital-item');
+    
+            hospitals.forEach(function(hospital) {
+                if (state === 'all' || hospital.getAttribute('data-state') === state) {
+                    hospital.style.display = 'block';
+                } else {
+                    hospital.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    
+    <section id="financial-assistance" class="financial-assistance-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="about-info">
+                        <h2 class="wow fadeInUp" data-wow-delay="0.1s">Financial Assistance for Brain Tumor Treatment</h2>
+                        <p>We understand that brain tumor treatment can be a heavy financial burden. Below are various avenues to get financial help, from government schemes to insurance plans and charitable organizations.</p>
+                    </div>
+                </div>
+    
+                <!-- Financial Assistance Programs -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="assistance-thumb wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="assistance-info">
+                            <h3>Ayushman Bharat (PMJAY)</h3>
+                            <p>Government's flagship health insurance scheme, offering cashless treatment for economically disadvantaged people.</p>
+                            <p><a href="https://pmjay.gov.in/" target="_blank">Learn More</a></p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 col-sm-6">
+                    <div class="assistance-thumb wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="assistance-info">
+                            <h3>Cancer Patients Aid Association (CPAA)</h3>
+                            <p>CPAA provides financial assistance for cancer and brain tumor patients, including surgeries, medications, and travel expenses.</p>
+                            <p><a href="https://www.cpaaindia.org" target="_blank">Learn More</a></p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 col-sm-6">
+                    <div class="assistance-thumb wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="assistance-info">
+                            <h3>Medical Crowdfunding</h3>
+                            <p>Platforms like Ketto, Milaap, and GoFundMe allow individuals to raise funds for medical treatment through public donations.</p>
+                            <p><a href="https://www.ketto.org" target="_blank">Ketto</a> | <a href="https://milaap.org" target="_blank">Milaap</a></p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Insurance Coverage -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="assistance-thumb wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="assistance-info">
+                            <h3>Health Insurance Providers</h3>
+                            <p>Leading insurance companies like Star Health, Religare, and HDFC ERGO provide comprehensive health insurance for neurological treatments.</p>
+                            <p><a href="https://www.starhealth.in" target="_blank">Star Health Insurance</a> | <a href="https://www.religarehealthinsurance.com" target="_blank">Religare Health Insurance</a></p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 col-sm-6">
+                    <div class="assistance-thumb wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="assistance-info">
+                            <h3>National Health Mission (NHM)</h3>
+                            <p>NHM provides financial aid for cancer and other life-threatening conditions. Many states provide cashless treatment under NHM schemes.</p>
+                            <p><a href="https://nhm.gov.in" target="_blank">Learn More</a></p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 col-sm-6">
+                    <div class="assistance-thumb wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="assistance-info">
+                            <h3>Government Hospitals Financial Aid</h3>
+                            <p>Many public hospitals offer reduced rates or free treatment for low-income individuals. Contact hospitals like AIIMS, SGPGI for more details.</p>
+                            <p><a href="https://www.aiims.edu" target="_blank">AIIMS Delhi</a> | <a href="https://www.sgpgi.ac.in" target="_blank">SGPGI Lucknow</a></p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Employer Assistance -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="assistance-thumb wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="assistance-info">
+                            <h3>Employer Assistance</h3>
+                            <p>Many employers provide medical assistance or health insurance to employees. Check with your company's HR department for available options.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 col-sm-6">
+                    <div class="assistance-thumb wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="assistance-info">
+                            <h3>Charitable Foundations</h3>
+                            <p>Some foundations, like the Tata Memorial Centre, provide funds and support for cancer patients, including brain tumor treatments.</p>
+                            <p><a href="https://tmc.gov.in" target="_blank">Tata Memorial Centre</a></p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 col-sm-6">
+                    <div class="assistance-thumb wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="assistance-info">
+                            <h3>Hospital Financial Aid Programs</h3>
+                            <p>Some hospitals, such as the Max Healthcare Group, offer discounts or payment plans for those undergoing brain tumor treatment.</p>
+                            <p><a href="https://www.maxhealthcare.in" target="_blank">Max Healthcare</a></p>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+
+     <div class="footer">
+		<div class="inner_footer">
+			<div class="address_container">
+				<h4><b>COLLEGE ADDRESS</b></h4><br>
+				
+				<address>
+                    MEA ENGINEERING COLLEGE.<br>
+                    Computer Science Department<br>
+                    Chemmaniyod, Perinthalmanna<br>
+                    Malappuram, Kerala<br>
+                    679325
+			    </address><br>
+			    <ul>
+			    	<li><span class="iconify" data-icon="eva:phone-fill" data-inline="false"></span> +91 8281987556</li><br>
+			    	<li><span class="iconify" data-icon="simple-line-icons:envelope" data-inline="false"></span> info@meaec.edu.in</li>
+			    	<br>
+			    	<p><a id="link" href="http://meaec.edu.in/">Website &raquo;</a></p>
+			    </ul>
+			</div>
+
+			<div class="guide_container">
+				<h4><b>GUIDE DETAILS</b></h4><br>
+				
+				<p class="footer_p">Project Guide : <p>
+				
+				<p class="footer_p">Mrs. Najla Musthafa</p>
+			</div>
+
+			<div class="blog_container">
+				<h4><b>TEAM DETAILS</b></h4><br>
+				<p class="footer_p">Our Team:<p>
+				
+                    <p class="footer_p">Minhaj Akavalappil<br>
+                        Mohammed Aflah<br>
+                        Mohammed Aseel<br>
+                        Mohammed Jasim A.<br></p>
+			</div>
+
+			<div class="newsletter_container">
+				<h4><b>CONTACT DETAILS</b></h4>
+					<br>
+					<form method="get">
+                        <fieldset>        
+                            <button ><a href="../Contact us/Contact.html">Contact Us!</a></button>
+                        </fieldset>
+                      </form>
+			</div>
+        </div>
+    </div>
+
+
+     <script src="../css/hospital page/js/jquery.js"></script>
+     <script src="../css/hospital page/js/bootstrap.min.js"></script>
+     <script src="../css/hospital page/js/jquery.sticky.js"></script>
+     <script src="../css/hospital page/js/jquery.stellar.min.js"></script>
+     <script src="../css/hospital page/js/wow.min.js"></script>
+     <script src="../css/hospital page/js/smoothscroll.js"></script>
+     <script src="../css/hospital page/js/owl.carousel.min.js"></script>
+     <script src="../css/hospital page/js/custom.js"></script>
+
+</body>
+</html>

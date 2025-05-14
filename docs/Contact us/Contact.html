@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Team Members</title>
+  <link rel="stylesheet" href="../css/Contact us/style.css">
+</head>
+<body>
+  <div class="wrapper row1">
+    <header id="header" class="clear">
+      <div id="logo" class="fl_left"> 
+        <h1><a href="../index.html">Brain Tumor Detection and Segmentation Using EfficientNet and YOLOv8</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li class="active"><a href="../index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <div class="row">
+        <div class="one_half first">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" required>
+        </div>
+        <div class="one_half">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one_half first">
+          <label for="phone">Phone:</label>
+          <input type="tel" name="phone" id="phone">
+        </div>
+        <div class="one_half">
+          <label for="subject">Subject:</label>
+          <input type="text" name="subject" id="subject">
+        </div>
+      </div>
+      <div class="row">
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" rows="5" required></textarea>
+      </div>
+      <div class="row">
+        <input type="submit" value="Send Message">
+      </div>
+      <div id="formMessage" style="display:none; color:green;">Your message has been sent successfully!</div>
+    </form>
+  </section>
+
+  <!-- Team Members Section -->
+  <!-- (Team section content remains unchanged) -->
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(this);
+
+      fetch('https://formspree.io/f/mpwagqkq', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          document.getElementById('formMessage').style.display = 'block';
+        } else {
+          alert('There was an error submitting the form.');
+        }
+      }).catch(error => {
+        console.error('Error:', error);
+        alert('There was an error submitting the form.');
+      });
+    });
+  </script>
+
+  <!-- Team Members Section -->
+  <section id="team" class="container row4">
+    <h2>Our Team</h2>
+    <div class="pr-charts">
+      <!-- Member 1 -->
+      <div class="pr-chart-ctrl">
+        <figure>
+          <img src="../css/Contact us/Aflah.jpg" alt="Member 1" style="width:100%">
+          <figcaption>
+            <h3>Mohammed Aflah</h3>
+            <p>Email: 21gcs40@meaec.edu.in</p>
+            <p>Phone: +91 8921274363</p>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="pr-chart-ctrl">
+        <figure>
+          <img src="../css/Contact us/Minhaj.jpg" alt="Member 2" style="width:100%">
+          <figcaption>
+            <h3>Minhaj Akavalappil</h3>
+            <p>Email: 21gcs24@meaec.edu.in</p>
+            <p>Phone: +91 8921848753</p>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="pr-chart-ctrl">
+        <figure>
+          <img src="../css/Contact us/Aseel.jpg" alt="Member 3" style="width:100%">
+          <figcaption>
+            <h3>Mohammed Aseel</h3>
+            <p>Email: 21ncs02@meaec.edu.in</p>
+            <p>Phone: +91 7994606575</p>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Member 4 -->
+      <div class="pr-chart-ctrl">
+        <figure>
+          <img src="../css/Contact us/Jasim.jpg" alt="Member 4" style="width:100%">
+          <figcaption>
+            <h3>Mohammed Jasim .A</h3>
+            <p>Email: 21gcs06@meaec.edu.in</p>
+            <p>Phone: +91 9072069999</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+   </body>
+</html>
