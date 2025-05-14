@@ -82,7 +82,7 @@ Brain tumor detection and classification is a critical task in medical imaging. 
 ### Lead Developer
 - **Mohammed Aflah**  
   Junior Product & Project Coordinator | CSE Graduate  
-  [![LinkedIn]("docs/css/Contact us/Aflah.jpg")](https://www.linkedin.com/in/mohammed-aflah)
+  ["docs/css/Contact us/Aflah.jpg"](https://www.linkedin.com/in/mohammed-aflah)
 
 ### Team Members
 - **John Alex** – Data Preprocessing & UI  
