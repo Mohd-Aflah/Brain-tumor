@@ -78,7 +78,7 @@ Brain tumor Classification and Segmentation is a critical task in medical imagin
 
 ---
 
-## 👨‍💻 Developers & Contributors
+## 👨‍💻 Developers
 
 - **Mohammed Aflah**  
 <a href="https://www.linkedin.com/in/mohammed-aflah">
