@@ -85,15 +85,18 @@ Brain tumor Classification and Segmentation is a critical task in medical imagin
   <img src="docs/css/Contact%20us/Aflah.jpg" alt="Linkedin" width="120" />
 </a>
 
+
 - **Minhaj Akavalapil** 
 <a href="https://www.linkedin.com/in/minhaj-akavalappil">
   <img src="docs/css/Contact%20us/Minhaj.jpg" alt="Linkedin" width="120" />
 </a>
 
+
 - **Mohammed Aseel**
 <a href="https://www.linkedin.com/in/mohdaseel">
   <img src="docs/css/Contact%20us/Aseel.jpg" alt="Linkedin" width="120" />
 </a>
+
 
 - **Mohammed Jasim A.** 
 <a href="https://www.linkedin.com/in/mohd-jasim">
