@@ -1,8 +1,8 @@
-# 🧠 Brain Tumor Detection and Classification using Deep Learning
+# 🧠 Brain Tumor Classification and Segmentation using Deep Learning
 
 [![Project Banner](docs/css/segmentation/images/faq.gif)](https://mohd-aflah.github.io/Brain-tumor/)
 
-## *A deep learning-powered system for accurate brain tumor detection and classification using CNN models.*
+## *A deep learning-powered system for accurate brain tumor Classification and Segmentation using CNN models.*
 
 ---
 
@@ -41,7 +41,7 @@ Static version of the app, suitable for GitHub Pages deployment.
 
 ## 🧠 Project Overview
 
-Brain tumor detection and classification is a critical task in medical imaging. This project presents a web-based intelligent system powered by deep learning to assist radiologists and doctors in diagnosing brain tumors from MRI images. Models such as **VGG16**, **EfficientNetB0**, and **ResNet50** were used to classify different types of tumors with high accuracy.
+Brain tumor Classification and Segmentation is a critical task in medical imaging. This project presents a web-based intelligent system powered by deep learning to assist radiologists and doctors in diagnosing brain tumors from MRI images. Models such as **VGG16**, **EfficientNetB0**, and **ResNet50** were used to classify different types of tumors with high accuracy.
 
 ### 🔬 Key Features:
 - CNN-based detection of glioma, meningioma, and pituitary tumors
